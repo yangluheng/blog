@@ -1,0 +1,40 @@
+/**
+ * 移动端css
+ * @azenui
+ * @date 2015-04-10
+ **/
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    font-family: "microsoft yahei","宋体",Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li {list-style: outside none none;}
+a:link, a:visited {color:#333;text-decoration:none;}
+img {border:medium none;}
+em {ont-style:normal;}
+h1, h2, h3, h4, h5 {font-weight:normal;}
+html, body {color:#333; overflow-x:hidden;}
+body {background:#090c15 url("../img/pc_bg.jpg") no-repeat center top;}
+
+
+.header-pic {height:40px; position:relative;}
+.wi980 {width:980px; margin:0 auto;}
+.myphone {background:url("../img/phone-cn.png") no-repeat; width:400px; height:640px; margin:158px -71px 0 0; position:relative; float:right;}
+.moveInLeft {animtion:0.8s ease 0s normal backwards 1 running moveInLeft}
+.dowinfor {padding-top:305px;}
+.dowinfor h1, .dowinfor h2, .dowinfor p {background:url("../img/info-cn-and.png") 0 0 no-repeat; width:500px; height:0; font-size:0; line-height:0; overflow:hidden; padding-top:70px;}
+.dowinfor p {background-position:0 -125px; padding-top:125px;}
+.dowinfor h1 {height:55px;}
+.dowwei {width:416px; height:170px;}
+.dowbtn {width:220px; padding-top:7px; float:right;}
+.dowbtn a {background:url("../img/info-cn-and.png") -199px -257px no-repeat; display:block; font-size:0; height:0; line-height:0; overflow:hidden; padding-top:70px; width:185px;}
+.dowbtn .myiphone1 {background:url("../img/info-cn-and1.png") -197px -262px no-repeat; margin-bottom:17px;}
+.dowbtn .myandroi2 {background-position:-199px -345px;}
+
+
+
+.dowcode {background:url("../img/info-cn-and.png") 0 -250px no-repeat; width:173px; height:170px; float:left;}
+.footer {clear:both; padding-top:27px; width:100%;}
+.footer p {color:#fff; font-size:0.75em; line-height:21px; text-align:center;}

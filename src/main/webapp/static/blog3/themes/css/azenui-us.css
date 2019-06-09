@@ -1,0 +1,28 @@
+.azen-contre {height:110px; background-color:#f7f7f7; padding:30px 0 10px 30px}
+.azen-cleras {padding-top:0px;}
+.azen-usereide {width:90px; height:90px;border-radius:50%;}
+.azen-usereide img {width:90px; height:90px; }
+.azen-jiahuali {text-align:left; padding:5px 20px 0 20px}
+.azen-jiahuali > h2 {font-size:25px; color:#666;}
+.azen-jiahuali > p {font-size:12px; }
+.azen-jiahuali > p a {color:#0b76ac;}
+.azen-jiahuali > h5 {font-size:12px; }
+
+
+.azen-boxche {}
+.azen-workss {text-align:left; border-bottom:1px solid #e4dad0; padding:20px 0 10px 20px;}
+.azen-workss > h3 {font-size:22px; color:#666;}
+.azen-workss > p {font-size:12px; color:#888;}
+.azen-production {padding:25px 0 40px 10px}
+.azen-lister li {background-color:#f8f8f8; width:230px;}
+.azen-viewit li {width:auto;}
+.azen-viewit {width:210px; border-bottom:1px solid #f1f0f0;}
+.list-viewit li {margin-right:15px;}
+.azen-paddin a {font-size:12px;}
+.azen-idinfor {padding:30px 45px}
+.azen-idinfor h5 {text-align:left; color:#666; margin-bottom:5px;}
+.azen-idinfor a {text-align:left; display:block; color:#0b76ac; font-size:12px;}
+.azen-more {height:30px; line-height:30px; background-color:#f1f0f0; border-radius:5px; margin:20px;}
+.azen-more a {font-size:12px;}
+.azen-more:hover {background-color:#0b76ac; color:#fff;}
+.azen-more a:hover {color:#fff; text-decoration:none;}

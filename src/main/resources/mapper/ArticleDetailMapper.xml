@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.datou.dao.ArticleDetailMapper">
+
+    <insert id="add" parameterType="articleDetail" useGeneratedKeys="true" keyColumn="id"
+        keyProperty="id">
+         insert into article_detail(content) VALUES (#{content})
+         <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+             SELECT LAST_INSERT_ID()
+         </selectKey>
+    </insert>
+
+    <delete id="delById" parameterType="java.lang.Integer">
+        delete from article_detail where article_detail.id=#{id}
+    </delete>
+
+    <select id="getById" parameterType="java.lang.Integer" resultType="java.util.HashMap">
+        select * from article_detail where article_detail.id=#{id}
+    </select>
+
+    <update id="updateById" parameterType="articleDetail">
+        update article_detail set  content=#{content} where id=#{id}
+    </update>
+</mapper>

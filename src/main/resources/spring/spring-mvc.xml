@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.datou.controller"/>
+
+
+    <!--开启最新注解驱动-->
+    <mvc:annotation-driven/>
+
+
+    <!--静态资源过滤设置-->
+    <mvc:resources mapping="/static/**" location="/static/"/>
+
+
+    <!-- 配置freeMarker的模板路径 -->
+    <bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
+    <!-- freemaker  Directive-->
+    <bean id="blockDirective" class="cn.org.rapid_framework.freemarker.directive.BlockDirective"/>
+    <bean id="extendsDirective" class="cn.org.rapid_framework.freemarker.directive.ExtendsDirective"/>
+    <bean id="overrideDirective" class="cn.org.rapid_framework.freemarker.directive.OverrideDirective"/>
+    <bean id="superDirective" class="cn.org.rapid_framework.freemarker.directive.SuperDirective"/>
+
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/templates/"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!--设置模板继承的参数-->
+        <property name="freemarkerVariables">
+            <map>
+                <!--<entry key="xml_escape" value-ref="fmXmlEscape" />-->
+                <entry key="extends" value-ref="extendsDirective"/>
+                <entry key="override" value-ref="overrideDirective"/>
+                <entry key="block" value-ref="blockDirective"/>
+                <entry key="super" value-ref="superDirective"/>
+            </map>
+        </property>
+    </bean>
+
+    <!-- freemarker视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="suffix" value=".ftl"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+
+        <!-- 此变量值为pageContext.request, 页面使用方法：rc.contextPath -->
+        <!--<property name="requestContextAttribute" value="rc"/>-->
+
+    </bean>
+
+
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+    <!--<property name="prefix" value="/templates/"></property>-->
+    <!--<property name="suffix" value=".jsp"></property>-->
+    <!--</bean>-->
+
+
+</beans>

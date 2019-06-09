@@ -1,0 +1,172 @@
+@charset "utf-8";
+/*
+ 
+ * 17素材vip建站专区模块代码
+ * 详尽信息请看官网：http://www.17sucai.com/pins/vip
+ *
+ * Copyright , 温州易站网络科技有限公司版权所有
+ *
+ * 请尊重原创，未经允许请勿转载。
+ * 在保留版权的前提下可应用于个人或商业用途
+ 
+*/
+
+html,
+body {
+	background: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #4c4c4c;
+}
+
+img {
+	border: 0;
+}
+
+a:hover {
+	color: #ff6600;
+}
+
+
+/* 必要布局样式css */
+
+.cation-content {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.cation-middle {
+	line-height: 48px;
+	font-size: 14px;
+	border: 1px solid #c5c5c5
+}
+
+.cation-middle .crumbs {
+	padding-left: 35px;
+	color: #444;
+	font-size: 16px;
+	line-height: 48px;
+	border-bottom: 1px solid #c5c5c5;
+}
+
+.cation-list {
+	overflow: hidden;
+}
+
+.cation-list dt {
+	float: left;
+	width: 190px;
+	font-weight: 700;
+	line-height: 48px;
+	position: relative;
+	color: #4c4c4c;
+	text-align: center;
+	font-size: 16px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #c5c5c5;
+	border-right: 1px solid #c5c5c5;
+}
+
+.cation-list:last-child dt {
+	border-bottom: none;
+}
+
+.cation-list:last-child dd {
+	border-bottom: none;
+}
+
+.cation-list dd {
+	margin-left: 190px;
+	overflow: hidden;
+	border-bottom: 1px solid #c5c5c5;
+}
+
+.cation-list dd a {
+	color: #444;
+	font-size: 14px;
+	width: 80px;
+	text-align: left;
+	height: 48px;
+	line-height: 48px;
+	display: inline-block;
+	float: left;
+	margin-left: 40px;
+}
+
+.cation-list dd a.all {
+	text-align: center;
+}
+
+.cation-list dd a.on,
+.cation-list a:hover {
+	color: #ff6600;
+	font-weight: 600;
+}
+
+.case_list {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.case_list ul li {
+	width: 390px;
+	float: left;
+	margin-right: 15px;
+	overflow: hidden;
+}
+
+.case_list ul li:nth-child(3n) {
+	margin-right: 0;
+}
+
+.case_list ul li .img {
+	float: left;
+	width: 100%;
+	height: 245px;
+	overflow: hidden;
+}
+
+.case_list ul li img {
+	max-width: 100%;
+	height: 245px;
+	display: block;
+}
+
+.case_list ul li img:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+	transition: all linear .5s;
+}
+
+.case_list ul li p {
+	float: left;
+	color: #444;
+	width: 100%;
+	border: 1px solid #c5c5c5;
+	border-top: none;
+	height: 68px;
+	line-height: 68px;
+	padding: 0 20px;
+	font-size: 18px;
+}
+
+.case_list ul li p span {
+	font-size: 14px;
+	color: #6a6a6a;
+	padding-left: 15px;
+}

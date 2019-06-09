@@ -1,0 +1,56 @@
+@charset "utf-8";
+/*
+ 
+ * 17素材vip建站专区模块代码
+ * 详尽信息请看官网：http://www.17sucai.com/pins/vip
+ *
+ * Copyright , 温州易站网络科技有限公司版权所有
+ *
+ * 请尊重原创，未经允许请勿转载。
+ * 在保留版权的前提下可应用于个人或商业用途
+ 
+*/
+
+*{margin: 0;padding: 0;font-family: "microsoft yahei";}
+ul{list-style: none;padding: 0;margin: 0;}
+a{text-decoration: none;color: #6F7479;}
+body{line-height: 1.5;color: #6F7479;font-size: 14px;background: #f7f7f7;}
+.product-all-header {height: 350px; background: url(../images/productBase-PC.jpg) no-repeat center / cover;}
+.product-all-header .header-content{max-width:1180px;margin:0 auto;padding-top:54px}
+.product-all-header .header-content h1{font-size:36px;color:#fff;line-height:50px;margin-bottom:10px;font-weight:normal}
+.product-all-header .header-content p{font-size:18px;color:#fff;line-height:24px;margin-bottom:20px;width:560px}
+.product-all-header .header-content .cui-btn{background:#f66f6a;border-radius:1px;padding:0;display:inline-block;height:40px;border:solid 1px transparent;border-radius:2px;font-weight:400;font-size:14px;line-height:38px;text-align:center;white-space:nowrap;vertical-align:middle;user-select:none;transition:.2s}
+.product-all-header .header-content .cui-btn a{color:#fff;display:block;width:100%;height:100%;padding:0 30px;}
+.product-all-header .header-content .cui-btn:hover{box-shadow:0 8px 16px 0 rgba(246,111,106,0.3)}
+.product-all-content{position:relative;max-width:1180px;margin:0 auto;padding-top:124px;padding-bottom:90px}
+.product-all-content .nav{position:absolute;top:-50px;left:0;width:100%;background:#fff;border:1px solid #ddd;box-shadow:0 4px 18px 0 rgba(0,0,0,0.05);border-radius:2px;padding:30px 0 20px 30px;overflow:hidden;z-index: 70;margin: 0px;}
+.product-all-content .nav.am-sticky{left: 0!important;width: 100%!important;}
+.product-all-content .nav .nav-content{width: 90%;margin: 0 auto;}
+.product-all-content .nav.am-sticky .nav-content{width: 1180px;margin: 0 auto;}
+.product-all-content .nav .nav-title{font-size:18px;color:#666a75;line-height:20px;margin-right:9px;display:block;float:left;margin-top:5px}
+.product-all-content .nav .nav-list{float:left;overflow:hidden;width:90%;font-size:0}
+.product-all-content .nav .nav-list li{float: left;}
+.product-all-content .nav .nav-list li a{display:inline-block;font-size:14px;color:#666a75;line-height:18px;padding:7px 8px;margin-right:10px;margin-bottom:10px;background:#fff;border:1px solid #ddd;border-radius:2px;cursor:pointer}
+.product-all-content .nav .nav-list li:last-of-type a{margin-bottom:0}
+.product-all-content .nav .nav-list li a.am-active{color:#f66f6a;border:1px solid #f66f6a;border-radius:2px}
+.product-all-content .nav .arrow{display:none}
+.product-all-content .product-content{overflow:hidden}
+.product-all-content .product-content .title{font-size:22px;color:#252b3a;letter-spacing:0;line-height:28px;position:relative;padding-left:12px;margin-bottom:20px;margin-top:30px}
+.product-all-content .product-content .title:before{background:#f66f6a;content:'';position:absolute;top:4px;left:0;width:2px;height:20px}
+.product-all-content .product-content .tips{float:left;position:relative;padding-left:10px;padding-right:10px;padding-top:10px;padding-bottom:10px}
+.product-all-content .product-content .tips.col-sm-4 {width: 33.33333333%;}
+.product-all-content .product-content .tips:nth-of-type(3n){padding-right:0}
+.product-all-content .product-content .tips:nth-of-type(3n - 2){padding-left:0}
+.product-all-content .product-content .tips:nth-of-type(-n+1){padding-bottom:0}
+.product-all-content .product-content .tips a{display:block;padding:30px 30px 30px 98px;background:#fff;border-radius:2px;border:1px solid #ddd}
+.product-all-content .product-content .tips a:hover{box-shadow:0 10px 40px 0 rgba(0,0,0,0.1)}
+.product-all-content .product-content .tips a:hover .tips-title{color:#f66f6a}
+.product-all-content .product-content .tips a:hover .icons-product-md{color:#f66f6a}
+.product-all-content .product-content .tips .inco{position:absolute;top:38px;left:32px}
+.product-all-content .product-content .tips .tips-title{font-size:18px;color:#252b3a;letter-spacing:0;line-height:22px;margin-bottom:10px}
+.product-all-content .product-content .tips .tips-info{font-size:14px;color:#a0a2a8;letter-spacing:0;word-break:break-all;text-align:justify;line-height:22px;height:88px;overflow:hidden;text-overflow:ellipsis;}
+
+
+
+
+

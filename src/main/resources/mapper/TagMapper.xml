@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.datou.dao.TagMapper">
+    <resultMap id="tagResultMap" type="tag">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="tag_count" property="articleCount"/>
+    </resultMap>
+    <insert id="add" parameterType="tag">
+     insert into tag(name) values (#{name})
+    </insert>
+
+    <select id="tagList" resultMap="tagResultMap">
+        select * from tag
+    </select>
+
+    <delete id="delById" parameterType="java.lang.Integer">
+        delete from tag where id=#{id}
+    </delete>
+
+    <select id="editById" parameterType="java.lang.Integer" resultMap="tagResultMap">
+        select * from tag where id=#{id}
+    </select>
+
+    <update id="updateById" parameterType="tag" >
+        update tag set name=#{name} where id=#{id}
+    </update>
+
+    <update id="updateCountById" parameterType="com.datou.model.TagCustomer">
+       update tag set  tag_count=tag_count+#{articleCount} where id  in
+       <foreach collection="articleTags" item="tag" separator="," open="(" close=")">
+          #{tag}
+       </foreach>
+
+    </update>
+    <update id="updateCountSubById" parameterType="com.datou.model.TagCustomer">
+        update tag set tag_count=tag_count-#{articleCount} where id in
+        <foreach collection="articleTags" item="tag" separator="," open="(" close=")">
+            #{tag}
+        </foreach>
+
+    </update>
+
+    <select id="getTagNameAllById" parameterType="tagCustomer" resultType="hashmap">
+        select name from tag where id in
+        <foreach collection="articleTags" item="tag" separator="," open="(" close=")">
+            #{tag}
+        </foreach>
+    </select>
+
+    <update id="delTagCountByArticle" parameterType="java.lang.Integer">
+        update tag
+        set tag_count=tag_count - 1
+        where tag.id in (
+        SELECT substring_index(substring_index(a.tag_id, ',', b.help_topic_id + 1), ',', - 1) AS tag_id
+        FROM article a
+        JOIN mysql.help_topic b ON b.help_topic_id &lt; (length(a.tag_id) - length(REPLACE(a.tag_id, ',', '')) + 1
+        )
+        where a.id = #{id}
+        )
+    </update>
+
+    <select id="getTagCount" resultType="java.lang.Integer">
+        select count(*) from tag
+    </select>
+</mapper>

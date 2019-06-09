@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.datou.dao.ArticleMapper">
+
+
+    <insert id="add" parameterType="article">
+         insert into article(title, description, update_time,category_id, tag_id, users_id, status, is_top, is_comment, article__detail_id)
+         VALUES (#{title},#{description},#{updateTime},#{categoryId},#{tags},#{userId},#{status},#{isTop},#{isComment},${articleId})
+    </insert>
+
+    <select id="articleList" resultType="java.util.HashMap" parameterType="article">
+       select a.id,c.name as category,u.username,a.title,a.update_time,a.comment_count,a.status,a.is_top from article as a left join category as c on a.category_id=c.id
+        inner  join users as u on a.users_id=u.uid
+        <if test="tagId!=null and tagId!=0">
+            left join tag as t on find_in_set(t.id,a.tag_id)
+        </if>
+
+        <where>
+          <if test="categoryId!=0 and categoryId!=null">
+              and a.category_id=#{categoryId}
+          </if>
+            <if test="status!=-1 and status!=null">
+                and a.status=#{status}
+            </if>
+            <if test="isTop!=0 and isTop!=null">
+                and a.is_top=#{isTop}
+            </if>
+            <if test="search!=null and search!=''">
+                <!--bind 标签的两个属性都是必选项， name 为绑定到上下文的变量名,value为OGNL表达式。-->
+                <bind name="pattern" value="'%' + search + '%'"/>
+                and concat(u.username,a.title) like #{pattern}
+            </if>
+
+            <if test="tagId!=null and tagId!=0">
+                and t.id in(#{tagId})
+            </if>
+        </where>
+
+    </select>
+
+    <delete id="delById" parameterType="java.lang.Integer">
+        delete from article where article.id=#{id}
+    </delete>
+
+    <select id="getById" parameterType="java.lang.Integer" resultType="java.util.HashMap">
+       select * from article where article.id=#{id}
+    </select>
+
+    <update id="updateById" parameterType="article">
+        update article set title=#{title},description=#{description},tag_id=#{tags},category_id=#{categoryId},status=#{status},
+        update_time=#{updateTime},is_top=#{isTop},is_comment=#{isComment}
+        where id=#{id}
+    </update>
+
+    <select id="getArticleCount" resultType="java.lang.Integer">
+        select count(*) from article
+    </select>
+</mapper>

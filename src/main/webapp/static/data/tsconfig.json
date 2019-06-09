@@ -1,0 +1,39 @@
+[
+  {
+    "text":"Bakersfield office",
+    "nodes": [
+      {
+        "text":"Bakersfield BD"
+      },
+      {
+        "text":"Bakersfield marketing"
+      },
+      {
+        "text":"Bakersfield HR"
+      }
+    ]
+  },
+  {
+    "text":"Stockton office",
+    "nodes": [
+      {
+        "text":"Stockton  service"
+      },
+      {
+        "text":"Stockton After sales"
+      },
+      {
+        "text":"Stockton Field service"
+      },
+      {
+        "text":"Stockton Finance"
+      },
+      {
+        "text":"Stockton HR"
+      }
+    ]
+  },
+  {
+    "text":"Chesapeake office HR"
+  }
+]

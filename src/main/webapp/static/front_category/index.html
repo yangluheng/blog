@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>分类条件筛选列表</title>
+		<link href="statics/css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="cation-content">
+			<div style="height:50px"></div>
+			<!-- 可以删除 -->
+
+			<div class="cation-middle">
+				<div class="crumbs">首页&nbsp;>&nbsp;装修案例</div>
+				<dl class="cation-list">
+					<dt>户型</dt>
+					<dd>
+						<a href="#" rel="" name="huxing" class="all on">不限</a>
+						<a href="#" rel="一居室" name="huxing" class="default">一居室</a>
+						<a href="#" rel="二居室" name="huxing" class="default">二居室</a>
+						<a href="#" rel="三居室" name="huxing" class="default">三居室</a>
+						<a href="#" rel="四居室" name="huxing" class="default">四居室</a>
+					</dd>
+				</dl>
+				<dl class="cation-list">
+					<dt>面积</dt>
+					<dd>
+						<a href="#" rel="" name="mianji" class="all on">不限</a>
+						<a href="#" rel="60m²以下" name="mianji" class="default">60m²以下</a>
+						<a href="#" rel="60-80m²" name="mianji" class="default">60-80m²</a>
+						<a href="#" rel="100-120m²" name="mianji" class="default">100-120m²</a>
+						<a href="#" rel="120-180m²" name="mianji" class="default">120-180m²</a>
+						<a href="#" rel="180m²以上" name="mianji" class="default">180m²以上</a>
+					</dd>
+				</dl>
+				<dl class="cation-list">
+					<dt>预算</dt>
+					<dd>
+						<a href="#" rel="" name="yusuan" class="all on">不限</a>
+						<a href="#" rel="5万以下" name="yusuan" class="default">5万以下</a>
+						<a href="#" rel="5-8万" name="yusuan" class="default">5-8万</a>
+						<a href="#" rel="8-15万" name="yusuan" class="default">8-15万</a>
+						<a href="#" rel="15万以上" name="yusuan" class="default">15万以上</a>
+					</dd>
+				</dl>
+				<dl class="cation-list">
+					<dt>风格</dt>
+					<dd>
+						<a href="#" rel="" name="fengge" class="all on">不限</a>
+						<a href="#" rel="现代简约" name="fengge" class="default">现代简约</a>
+						<a href="#" rel="美式田园" name="fengge" class="default">美式田园</a>
+						<a href="#" rel="新中式" name="fengge" class="default">新中式</a>
+						<a href="#" rel="北欧" name="fengge" class="default">北欧</a>
+						<a href="#" rel="工业" name="fengge" class="default">工业</a>
+						<a href="#" rel="欧式" name="fengge" class="default">欧式</a>
+						<a href="#" rel="其他" name="fengge" class="default">其他</a>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="case_list">
+				<ul>
+					<li>
+						<div class="img">
+							<a href="javascript:;"><img src="statics/images/case.jpg" /></a>
+						</div>
+						<p>
+							<a href="javascript:;">华润幸福里</a><span>三居室</span><span>103.00m²</span><span>11.90万</span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="javascript:;"><img src="statics/images/case.jpg" /></a>
+						</div>
+						<p>
+							<a href="javascript:;">中天悦府</a><span>二居室</span><span>95.00m²</span><span>9.80万</span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="javascript:;"><img src="statics/images/case.jpg" /></a>
+						</div>
+						<p>
+							<a href="javascript:;">中天悦府</a><span>二居室</span><span>95.00m²</span><span>9.80万</span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="statics/js/jquery.min.js"></script>
+		<script type="text/javascript" src="statics/js/current.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				new SelectTag({
+					child: ".default", //所有默认
+					over: 'on', //当前选中
+					all: ".all" // 默认全部
+				});
+			})
+		</script>
+
+	</body>
+
+</html>
